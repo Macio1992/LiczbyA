@@ -19,7 +19,7 @@ int main(){
 	ratio = 1./CLOCKS_PER_SEC;	
 	float czas;
 	
-	int i, wynik, d = 100;
+	int i, wynik = 10, d = 100;
 	ostringstream ss;
 	ss << d;
 	string str = ss.str();
@@ -28,7 +28,7 @@ int main(){
 	if(strumien.good() && plik.good()){
 		cout <<"rozmiar |\tczas_tworzenia |\tczas_pisania |\tczas_czytania |\n";
 		while(i <= 5){
-			wynik = pow(10, i+1);
+			wynik *= 10;
 			tab = new double[wynik];
 			strumien.open(str.c_str());
 			cout.precision(3);
